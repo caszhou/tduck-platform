@@ -26,6 +26,7 @@ services:
       - "8999:8999" # API端口
     volumes:
       - "upload-volume:/application/BOOT-INF/lib/upload"  # 持久化上传的文件
+      - "/data/zxj/dist:/application/BOOT-INF/classes/static"
     environment:
       - "JAVA_OPTS=-Duser.language=zh -XX:+UseG1GC"
       - "TZ=Asia/Shanghai"
